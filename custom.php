@@ -33,8 +33,8 @@ class Fancy_Dashboard_Widget {
     	$default_dashboard = $wp_meta_boxes['dashboard']['normal']['core'];
     	
     	// Backup and delete our new dashboard widget from the end of the array.
-    	$gt_dashboard_backup = array( 'gt_dashboard_widget' => $default_dashboard['gt_dashboard_widget'] );
-    	unset( $default_dashboard['gt_dashboard_widget'] );
+    	$gt_dashboard_backup = array( 'fancy_dashboard_widget' => $default_dashboard['fancy_dashboard_widget'] );
+    	unset( $default_dashboard['fancy_dashboard_widget'] );
      
     	// Merge the two arrays together so our widget is at the beginning.
     	$sorted_dashboard = array_merge( $gt_dashboard_backup, $default_dashboard );

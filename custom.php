@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
 
 class Fancy_Dashboard_Widget {
     public function __construct() {
-        add_action('wp_dashboard_setup', array($this, 'add_dashboard_widget'));
+        add_action('wp_dashboard_setup', array($this, 'add_dashboard_widget'),1);
         add_action('admin_enqueue_scripts', array($this, 'enqueue_styles'));
     }
 
